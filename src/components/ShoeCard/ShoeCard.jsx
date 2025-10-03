@@ -36,7 +36,7 @@ const ShoeCard = ({
       <Wrapper>
         <ImageWrapper>
           <Image alt="" src={imageSrc} />
-          {variant === 'new-release' && <Flag color="new-release">New Release</Flag>}
+          {variant === 'new-release' && <Flag color="new-release">Just Released!</Flag>}
           {variant === 'on-sale' && <Flag color="on-sale">Sale</Flag>}
         </ImageWrapper>
         <Spacer size={12} />
@@ -70,7 +70,6 @@ const Flag = styled.div`
   top: 12px;
   right: -4px;
   padding: 0 11px;
-  max-width: 118px;
   height: 32px;
   border-radius: 2px;
   color: white;
@@ -83,6 +82,7 @@ const Flag = styled.div`
 
 const Image = styled.img`
   width: 100%;
+  border-radius: 16px 16px 4px 4px;
 `;
 
 const Row = styled.div`
@@ -97,7 +97,7 @@ const Name = styled.h3`
 `;
 
 const Price = styled.span`
-  color: ${COLORS.gray[900]};
+  color: ${props => props.strike ? COLORS.gray[700] : 'inherit'};
   text-decoration: ${props => props.strike ? 'line-through' : 'none'};
   
 `;
