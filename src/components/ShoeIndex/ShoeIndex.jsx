@@ -46,6 +46,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
+  align-items: baseline;
 `;
 
 const LeftColumn = styled.div`
