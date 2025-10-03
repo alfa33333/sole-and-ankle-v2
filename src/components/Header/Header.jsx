@@ -30,7 +30,7 @@ const MainHeader = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 32px;
+  padding: 25px 32px;
   border-bottom: 1px solid ${COLORS.gray[300]};
 `;
 
